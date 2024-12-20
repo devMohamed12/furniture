@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 import {
   Navbar,
   Home,
@@ -16,11 +16,10 @@ import "./index.css";
 import Auth from "./components/Auth/Auth.jsx";
 import ProductsCategory from "./components/ProductsCategory.jsx";
 import TrendingProductss from "./components/TrendingProductss.jsx";
-import TTT from "./TTT.jsx";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Navbar />
         <Routes>
           {/* <Route path="*" element={<Navigate to="/" />} /> */}
@@ -38,10 +37,9 @@ function App() {
           <Route path="auth" element={<Auth />} />
            <Route path="products2/:category" element={<ProductsCategory />} />
            <Route path="trending" element={<TrendingProductss />} />
-           <Route path="ttt" element={<TTT />} />
         </Routes>
       <Footer/>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
